@@ -28,6 +28,11 @@ loglevel_to_str(loglevel_t level)
 	return loglevel_strings[level];
 }
 
+/*
+ * A simple logging utility function to log messages to standard
+ * output. Can add file support later on.
+ * Check logger.h for support log levels.
+ */
 void
 logger(loglevel_t level, const char *fmt, ...)
 {

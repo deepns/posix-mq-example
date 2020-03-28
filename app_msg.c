@@ -3,6 +3,9 @@
 #include "app_msg.h"
 #include "logger.h"
 
+/*
+ * Wrapper around mq_send to send a message to the destination thread
+ */
 void
 ap_send_msg(thread_info_t *dest, appd_msg_t *msg)
 {
@@ -17,6 +20,9 @@ ap_send_msg(thread_info_t *dest, appd_msg_t *msg)
 	}   
 }
 
+/*
+ * Wrapper around mq_receive to receive message from the source thread
+ */
 appd_msg_t *
 ap_recv_msg(thread_info_t *src) 
 {  
