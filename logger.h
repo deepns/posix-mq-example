@@ -2,16 +2,16 @@
 #define _LOG_H_
 
 #define FOREACH_LOGLEVEL(LOGLEVEL) \
-	LOGLEVEL(DEBUG), \
-	LOGLEVEL(INFO), \
-	LOGLEVEL(WARNING), \
-	LOGLEVEL(ERROR) \
+    LOGLEVEL(DEBUG), \
+    LOGLEVEL(INFO), \
+    LOGLEVEL(WARNING), \
+    LOGLEVEL(ERROR) \
 
 #define ENUM(e) e
 #define ENUM_STR(e) #e
 
 enum loglevel {
-	FOREACH_LOGLEVEL(ENUM)
+    FOREACH_LOGLEVEL(ENUM)
 };
 
 typedef enum loglevel loglevel_t;

@@ -17,16 +17,16 @@ typedef struct appd_msg {
 } appd_msg_t;
 
 typedef struct thread_info {
-	pthread_t id;
-	int num;
-	const char* name;
-	mqd_t mqd;
-	void *(*start) (void *);
+        pthread_t id;
+        int num;
+        const char* name;
+        mqd_t mqd;
+        void *(*start) (void *);
 } thread_info_t;
 
 struct appdata {
-	thread_info_t health_checker;
-	thread_info_t notifier;
+        thread_info_t health_checker;
+        thread_info_t notifier;
 };
 
 appd_msg_t*  ap_recv_msg(thread_info_t *src);
